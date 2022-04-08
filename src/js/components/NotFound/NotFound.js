@@ -1,3 +1,6 @@
-const NotFound = () => `<div class="not__found__tmp">Empty</div>`;
+import s from './NotFound.module.scss';
+
+const NotFound = () =>
+  `<div class="${s.notFound}">You do not have any notes, please add one</div>`;
 
 export default NotFound;

@@ -2,9 +2,9 @@ import { CATEGORIES } from '../../utils';
 import sprite from '../../../images/icons/sprite.svg';
 
 const NoteItem = note => {
-  const { id, title, created, category, content, dates } = note;
+  const { id, title, created, category, content, dates, archived } = note;
 
-  const insertIcon = category => {
+  const insertCategoryIcon = () => {
     switch (category) {
       case CATEGORIES.IDEA:
         return `${sprite}#icon-light`;
@@ -19,13 +19,19 @@ const NoteItem = note => {
     }
   };
 
+  const insertArchiveIcon = () => {
+    return archived
+      ? `${sprite}#icon-archive-out`
+      : `${sprite}#icon-archive-in`;
+  };
+
   return `
             <li id="${id}" class="notes__item">
               <ul class="notes__row">
                 <li class="notes__col col__icon">
                   <div class="icon__wrapper">
                     <svg width="20" height="20">
-                      <use href="${insertIcon(category)}"></use>
+                      <use href="${insertCategoryIcon()}"></use>
                     </svg>
                   </div>
                 </li>
@@ -36,19 +42,19 @@ const NoteItem = note => {
                 <li class="notes__col">${dates}</li>
                 <li class="notes__col col__actions">
                   <div class="button__group">
-                    <button type="button">
+                    <button type="button" class="edit">
                       <svg width="20" height="20">
                         <use href="${sprite}#icon-edit"></use>
                       </svg>
                     </button>
-                    <button type="button">
+                    <button type="button" class="archive">
                       <svg width="20" height="20">
                         <use
-                          href="${sprite}#icon-archive-in"
+                          href="${insertArchiveIcon()}"
                         ></use>
                       </svg>
                     </button>
-                    <button type="button">
+                    <button type="button" class="delete">
                       <svg width="20" height="20">
                         <use href="${sprite}#icon-delete"></use>
                       </svg>
