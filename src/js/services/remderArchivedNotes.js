@@ -8,9 +8,7 @@ const renderArchivedNotes = () => {
   notesWrapper.textContent = '';
   notesWrapper.insertAdjacentHTML(
     'beforeend',
-    notes.length >= 1
-      ? NoteLIst(notes.filter(note => !note.archived))
-      : NotFound()
+    notes.length >= 1 ? NoteLIst(notes) : NotFound()
   );
 };
 
