@@ -4,11 +4,111 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Notes App</title>
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <div id="portal"></div>
+    <div id="app">
+      <div id="notes">
+        <div class="motes__content__wrapper">
+          <ul class="notes__head__row">
+            <li class="notes__head__col col__icon"></li>
+            <li class="notes__head__col">Name</li>
+            <li class="notes__head__col">Created</li>
+            <li class="notes__head__col">Category</li>
+            <li class="notes__head__col">Content</li>
+            <li class="notes__head__col">Dates</li>
+            <li class="notes__head__col col__actions">
+              <div class="button__group">
+                <button type="button">
+                  <svg width="20" height="20">
+                    <use href="./images/icons/sprite.svg#icon-archive-in"></use>
+                  </svg>
+                </button>
+                <button type="button">
+                  <svg width="20" height="20">
+                    <use href="./images/icons/sprite.svg#icon-delete"></use>
+                  </svg>
+                </button>
+                <!-- end of button group -->
+              </div>
+            </li>
+            <!-- end of head -->
+          </ul>
+          <ul class="notes__content">
+            <li class="notes__item">
+              <ul class="notes__row">
+                <li class="notes__col col__icon">
+                  <div class="icon__wrapper">
+                    <svg width="20" height="20">
+                      <use href="./images/icons/sprite.svg#icon-light"></use>
+                    </svg>
+                  </div>
+                </li>
+                <li class="notes__col col__name">Name</li>
+                <li class="notes__col">Created</li>
+                <li class="notes__col">Category</li>
+                <li class="notes__col">Content</li>
+                <li class="notes__col">Dates</li>
+                <li class="notes__col col__actions">
+                  <div class="button__group">
+                    <button type="button">
+                      <svg width="20" height="20">
+                        <use href="./images/icons/sprite.svg#icon-edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button">
+                      <svg width="20" height="20">
+                        <use
+                          href="./images/icons/sprite.svg#icon-archive-in"
+                        ></use>
+                      </svg>
+                    </button>
+                    <button type="button">
+                      <svg width="20" height="20">
+                        <use href="./images/icons/sprite.svg#icon-delete"></use>
+                      </svg>
+                    </button>
+                    <!-- end of button group -->
+                  </div>
+                </li>
+                <!-- end of notes row -->
+              </ul>
+            </li>
+            <!--  end of notes content -->
+          </ul>
+          <!-- end of notes content wrapper -->
+        </div>
+        <button class="create__btn" type="button">Create note</button>
+        <div class="notes__summary">
+          <ul class="notes__head__row">
+            <li class="notes__head__col col__icon"></li>
+            <li class="notes__head__col">Note Category</li>
+            <li class="notes__head__col">Active</li>
+            <li class="notes__head__col">Archived</li>
+            <!-- end of head -->
+          </ul>
+          <ul class="notes__row">
+            <li class="notes__col col__icon">
+              <div class="icon__wrapper">
+                <svg width="20" height="20">
+                  <use href="./images/icons/sprite.svg#icon-light"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="notes__col col__name">Note Category</li>
+            <li class="notes__col">0</li>
+            <li class="notes__col">0</li>
+            <!-- end of notes row -->
+          </ul>
+        </div>
+        <!-- end of notes -->
+      </div>
+      <!-- end of app -->
+    </div>
+    <div id="portal">
+      <!-- end of portal -->
+    </div>
+    <!-- end of body -->
   </body>
 </html>
