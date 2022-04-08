@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 ul,
 ol {
   list-style: none;
@@ -14,12 +18,19 @@ ol {
 button {
   margin: 0;
   padding: 0;
+  display: block;
   cursor: pointer;
 }
 
 img,
 svg {
   display: block;
+}
+
+.button__group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .button__group button {
