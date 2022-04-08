@@ -3,7 +3,7 @@
   max-width: 1270px;
 }
 
-.motes__content__wrapper {
+.notes__content__wrapper {
   margin-bottom: 20px;
 }
 
@@ -29,10 +29,10 @@
 
 .notes__row {
   background-color: rgb(238, 238, 238);
+}
 
-  &:not(:last-of-type) {
-    margin-bottom: 5px;
-  }
+.notes__item:not(:last-of-type) {
+  margin-bottom: 5px;
 }
 
 .notes__head__col,
