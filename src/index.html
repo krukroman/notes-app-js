@@ -8,7 +8,74 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <div id="portal"></div>
+    <div id="app">
+      <div id="notes">
+        <ul class="notes__head__row">
+          <li class="notes__head__col">icon</li>
+          <li class="notes__head__col">Name</li>
+          <li class="notes__head__col">Created</li>
+          <li class="notes__head__col">Category</li>
+          <li class="notes__head__col">Content</li>
+          <li class="notes__head__col">Dates</li>
+          <li class="notes__head__col">
+            <div class="button__group">
+              <button type="button">
+                <svg width="20" height="20">
+                  <use href="./images/icons/sprite.svg#icon-archive-in"></use>
+                </svg>
+              </button>
+              <button type="button">
+                <svg width="20" height="20">
+                  <use href="./images/icons/sprite.svg#icon-delete"></use>
+                </svg>
+              </button>
+              <!-- end of button group -->
+            </div>
+          </li>
+          <!-- end of head -->
+        </ul>
+        <ul class="notes__content">
+          <li class="notes__item">
+            <ul class="notes__row">
+              <li class="notes__col">icon</li>
+              <li class="notes__col">Name</li>
+              <li class="notes__col">Created</li>
+              <li class="notes__col">Category</li>
+              <li class="notes__col">Content</li>
+              <li class="notes__col">Dates</li>
+              <li class="notes__col">
+                <div class="button__group">
+                  <button type="button">
+                    <svg width="20" height="20">
+                      <use href="./images/icons/sprite.svg#icon-edit"></use>
+                    </svg>
+                  </button>
+                  <button type="button">
+                    <svg width="20" height="20">
+                      <use
+                        href="./images/icons/sprite.svg#icon-archive-in"
+                      ></use>
+                    </svg>
+                  </button>
+                  <button type="button">
+                    <svg width="20" height="20">
+                      <use href="./images/icons/sprite.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                  <!-- end of button group -->
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!--  end of notes content -->
+        </ul>
+        <!-- end of notes -->
+      </div>
+      <!-- end of app -->
+    </div>
+    <div id="portal">
+      <!-- end of portal -->
+    </div>
+    <!-- end of body -->
   </body>
 </html>
