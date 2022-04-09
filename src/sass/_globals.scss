@@ -27,6 +27,75 @@ svg {
   display: block;
 }
 
+.row {
+  padding-block: 5px;
+  padding-inline: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  background-color: rgb(223, 223, 223);
+
+  &:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+}
+
+.col {
+  padding-inline: 10px;
+  flex-grow: 1;
+  flex-basis: 100%;
+
+  &:nth-child(2) {
+    font-weight: bold;
+  }
+}
+
+.notes__header {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(124, 124, 124);
+
+  & svg {
+    fill: #fff;
+  }
+
+  & .icon {
+    background-color: transparent;
+  }
+}
+
+.icon {
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 40px;
+  height: auto;
+  fill: rgb(226, 226, 226);
+  background-color: rgb(116, 116, 116);
+
+  border-radius: 50%;
+}
+
+.actions {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.notes__content {
+  margin-bottom: 15px;
+}
+
+.notes__summary {
+  margin-top: 50px;
+}
+
 .button__group {
   display: flex;
   align-items: center;
@@ -37,4 +106,8 @@ svg {
   padding: 5px;
   border: none;
   background-color: transparent;
+}
+
+.create__btn {
+  margin-left: auto;
 }

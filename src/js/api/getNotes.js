@@ -1,8 +1,11 @@
+import { NOTES } from '../utils';
+
 const getNotes = () => {
   if (localStorage.hasOwnProperty('notes')) {
-    return JSON.parse(localStorage.getItem('notes'));
+    const parsedNotes = JSON.parse(localStorage.getItem('notes'));
+    return parsedNotes.length != 0 ? parsedNotes : NOTES;
   }
-  return [];
+  return NOTES;
 };
 
 export default getNotes;
