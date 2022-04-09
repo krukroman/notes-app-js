@@ -51,21 +51,6 @@ svg {
   }
 }
 
-.notes__header {
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #fff;
-  background-color: rgb(124, 124, 124);
-
-  & svg {
-    fill: #fff;
-  }
-
-  & .icon {
-    background-color: transparent;
-  }
-}
-
 .icon {
   padding: 10px;
 
@@ -86,28 +71,4 @@ svg {
   width: 100px;
   height: auto;
   flex-shrink: 0;
-}
-
-.notes__content {
-  margin-bottom: 15px;
-}
-
-.notes__summary {
-  margin-top: 50px;
-}
-
-.button__group {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.button__group button {
-  padding: 5px;
-  border: none;
-  background-color: transparent;
-}
-
-.create__btn {
-  margin-left: auto;
 }
