@@ -1,6 +1,10 @@
 import { nanoid } from 'nanoid';
 import { addNote } from '../api';
-import { renderNotes, unmountEditor } from '../renderFunctions';
+import {
+  renderNotes,
+  renderSummaryList,
+  unmountEditor
+} from '../renderFunctions';
 import { getActiveNotes } from '../utils';
 
 const onCreateSubmit = e => {
@@ -25,6 +29,7 @@ const onCreateSubmit = e => {
   addNote(newNote);
   unmountEditor();
   renderNotes(getActiveNotes());
+  renderSummaryList();
 };
 
 export default onCreateSubmit;

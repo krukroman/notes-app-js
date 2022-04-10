@@ -1,5 +1,9 @@
 import { updateNote } from '../api';
-import { renderNotes, unmountEditor } from '../renderFunctions';
+import {
+  renderNotes,
+  renderSummaryList,
+  unmountEditor
+} from '../renderFunctions';
 import { getActiveNotes, getArchivedNotes } from '../utils';
 
 const onEditSubmit = (e, note) => {
@@ -13,6 +17,7 @@ const onEditSubmit = (e, note) => {
   note.archived
     ? renderNotes(getArchivedNotes())
     : renderNotes(getActiveNotes());
+  renderSummaryList();
 };
 
 export default onEditSubmit;
