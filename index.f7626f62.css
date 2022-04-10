@@ -1,3 +1,168 @@
+*, :after, :before {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: sans-serif;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+img, svg {
+  display: block;
+}
+
+.row {
+  width: 100%;
+  background-color: #dfdfdf;
+  align-items: center;
+  padding-block: 5px;
+  padding-inline: 10px;
+  display: flex;
+}
+
+.row:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+.col {
+  flex-grow: 1;
+  flex-basis: 100%;
+  padding-inline: 10px;
+}
+
+.col:nth-child(2) {
+  font-weight: bold;
+}
+
+.icon {
+  width: 40px;
+  height: auto;
+  fill: #e2e2e2;
+  background-color: #747474;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+}
+
+.actions {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.notes__header {
+  color: #fff;
+  background-color: #7c7c7c;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.notes__header svg {
+  fill: #fff;
+}
+
+.notes__header .icon {
+  background-color: #0000;
+}
+
+.notes__content {
+  margin-bottom: 15px;
+}
+
+.button__group {
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+
+.button__group button {
+  background-color: #0000;
+  border: none;
+  padding: 5px;
+}
+
+.button__group button svg {
+  pointer-events: none;
+}
+
+.create__btn {
+  margin-left: auto;
+}
+
+.notes__summary {
+  margin-top: 50px;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  background-color: #d1d1d1af;
+  place-items: center;
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding-block: 10px;
+  padding-inline: 15px;
+  box-shadow: 2px 2px 4px #58585875;
+}
+
+#form :is(label, input, select, textarea) {
+  width: 100%;
+  display: block;
+}
+
+#form label {
+  margin-bottom: 5px;
+}
+
+#form :is(input, select, textarea) {
+  margin-bottom: 10px;
+  padding-block: 5px;
+  padding-inline: 10px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+#form textarea {
+  resize: none;
+}
+
+.form__button__group {
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  display: flex;
+}
+
+.-r-aFq_notFound {
+  text-align: center;
+  background-color: #eee;
+  padding-block: 20px;
+}
 
 /*# sourceMappingURL=index.f7626f62.css.map */
