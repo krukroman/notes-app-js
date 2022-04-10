@@ -1,9 +1,10 @@
+import { refs } from '../utils';
 import { getNotesStatistics } from '../utils';
 import SummaryList from '../components/SummaryList';
 import NotFound from '../components/NotFound';
 
 const renderSummaryList = () => {
-  const summaryWrapper = document.querySelector('.summary__content');
+  const summaryWrapper = refs.summaryContainer();
   const statistics = getNotesStatistics();
   summaryWrapper.textContent = '';
   summaryWrapper.insertAdjacentHTML(

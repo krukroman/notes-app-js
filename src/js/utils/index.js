@@ -6,3 +6,5 @@ export { default as insertCategoryIcon } from './insertCategoryIcon';
 export { default as transformDate } from './transformDate';
 export { default as parseDateFromText } from './parseDateFromText';
 export { default as NOTES } from './notes';
+export { default as refs } from './refs';
+export { default as getNoteId } from './getNoteId';

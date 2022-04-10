@@ -1,7 +1,8 @@
+import { refs } from '../utils';
 import Modal from '../components/Modal';
 import EditorForm from '../components/EditorForm';
 
-const portal = document.getElementById('portal');
+const portal = refs.portalContainer();
 
 const renderEditor = (note = false) => {
   if (note) {
