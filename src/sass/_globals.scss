@@ -27,14 +27,48 @@ svg {
   display: block;
 }
 
-.button__group {
+.row {
+  padding-block: 5px;
+  padding-inline: 10px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  width: 100%;
+
+  background-color: rgb(223, 223, 223);
+
+  &:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
 }
 
-.button__group button {
-  padding: 5px;
-  border: none;
-  background-color: transparent;
+.col {
+  padding-inline: 10px;
+  flex-grow: 1;
+  flex-basis: 100%;
+
+  &:nth-child(2) {
+    font-weight: bold;
+  }
+}
+
+.icon {
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 40px;
+  height: auto;
+  fill: rgb(226, 226, 226);
+  background-color: rgb(116, 116, 116);
+
+  border-radius: 50%;
+}
+
+.actions {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
 }

@@ -1,79 +1,38 @@
-#notes {
-  margin-inline: auto;
-  max-width: 1270px;
-}
-
-.motes__content__wrapper {
-  margin-bottom: 20px;
-}
-
-.notes__head__row,
-.notes__row {
-  padding-block: 5px;
-  padding-inline: 10px;
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-}
-
-.notes__head__row {
+.notes__header {
   margin-bottom: 5px;
-
   font-weight: bold;
+  color: #fff;
+  background-color: rgb(124, 124, 124);
 
-  color: white;
+  & svg {
+    fill: #fff;
+  }
 
-  background-color: rgb(90, 90, 90);
-}
-
-.notes__row {
-  background-color: rgb(238, 238, 238);
-
-  &:not(:last-of-type) {
-    margin-bottom: 5px;
+  & .icon {
+    background-color: transparent;
   }
 }
 
-.notes__head__col,
-.notes__col {
-  flex-grow: 1;
+.notes__content {
+  margin-bottom: 15px;
 }
 
-.col__icon {
-  padding-inline-end: 10px;
-  flex-grow: 0;
-  width: 50px;
-}
-
-.icon__wrapper {
-  padding-block: 10px;
+.button__group {
   display: flex;
   align-items: center;
-  justify-content: center;
-  fill: rgb(238, 238, 238);
-  background-color: rgb(90, 90, 90);
-
-  border-radius: 50%;
+  justify-content: flex-end;
 }
 
-.col__name {
-  font-weight: bold;
-}
+.button__group button {
+  padding: 5px;
+  border: none;
+  background-color: transparent;
 
-.col__actions {
-  flex-grow: 0;
-  width: 100px;
-}
-
-.notes__head__row .button__group svg {
-  fill: white;
+  & svg {
+    pointer-events: none;
+  }
 }
 
 .create__btn {
   margin-left: auto;
-}
-
-.notes__summary {
-  margin-top: 50px;
 }
