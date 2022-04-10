@@ -1,5 +1,7 @@
-import renderEditor from '../renderFunctions/renderEditor';
+import { renderEditor } from '../renderFunctions';
 
-const onCreateBtn = renderEditor;
+const onCreateBtn = e => {
+  renderEditor();
+};
 
 export default onCreateBtn;

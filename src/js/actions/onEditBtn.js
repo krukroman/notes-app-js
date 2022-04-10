@@ -1,6 +1,6 @@
-import { getNoteId } from '../utils';
 import { getById } from '../api';
-import renderEditor from '../renderFunctions/renderEditor';
+import { getNoteId } from '../utils';
+import { renderEditor } from '../renderFunctions';
 
 const onEditBtn = e => {
   const id = getNoteId(e);

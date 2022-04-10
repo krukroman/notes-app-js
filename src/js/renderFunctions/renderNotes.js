@@ -1,7 +1,5 @@
 import { refs } from '../utils';
-import onEditBtn from '../actions/onEditBtn';
-import onArchiveBtn from '../actions/onArchiveBtn';
-import onDeleteBtn from '../actions/onDeleteBtn';
+import { onEditBtn, onArchiveBtn, onDeleteBtn } from '../actions';
 import { getActiveNotes } from '../utils';
 import NoteLIst from '../components/NotesList';
 import NotFound from '../components/NotFound';
@@ -24,9 +22,8 @@ const addEventListeners = () => {
   });
 };
 
-const renderActiveNotes = () => {
+const renderNotes = notes => {
   const notesWrapper = refs.notesContainer();
-  const notes = getActiveNotes();
   notesWrapper.textContent = '';
   notesWrapper.insertAdjacentHTML(
     'beforeend',
@@ -35,4 +32,4 @@ const renderActiveNotes = () => {
   notes.length >= 1 && addEventListeners();
 };
 
-export default renderActiveNotes;
+export default renderNotes;

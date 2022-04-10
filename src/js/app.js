@@ -1,10 +1,17 @@
-// TODO в апі додати можливість видалення всіх нотаток зразу
-// TODO написати функції на сабміт форм створення та редаугвання нотаток
+import {
+  renderMainLayout,
+  renderNotes,
+  renderSummaryList
+} from './renderFunctions/';
 
-import renderMainLayout from './renderFunctions/renderMainLayout';
-import renderActiveNotes from './renderFunctions/renderActiveNotes';
-import renderSummary from './renderFunctions/renderSummary';
+import { getActiveNotes } from './utils';
 
-renderMainLayout();
-renderActiveNotes();
-renderSummary();
+const App = {
+  init() {
+    renderMainLayout();
+    renderNotes(getActiveNotes());
+    renderSummaryList();
+  }
+};
+
+export default App;

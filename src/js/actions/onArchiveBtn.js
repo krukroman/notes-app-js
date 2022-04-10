@@ -1,14 +1,15 @@
 import { getNoteId } from '../utils';
 import { getById, handleArchive } from '../api';
-import renderActiveNotes from '../renderFunctions/renderActiveNotes';
-import renderArchivedNotes from '../renderFunctions/renderArchivedNotes';
-import renderSummaryList from '../renderFunctions/renderSummary';
+import { renderNotes, renderSummaryList } from '../renderFunctions';
+import { getActiveNotes, getArchivedNotes } from '../utils';
 
 const onArchiveBtn = e => {
   const id = getNoteId(e);
   const note = getById(id);
   handleArchive(id);
-  note.archived ? renderArchivedNotes() : renderActiveNotes();
+  note.archived
+    ? renderNotes(getArchivedNotes())
+    : renderNotes(getActiveNotes());
   renderSummaryList();
 };
 

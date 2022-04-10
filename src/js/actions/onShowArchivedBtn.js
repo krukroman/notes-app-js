@@ -1,6 +1,6 @@
 import { refs } from '../utils';
-import renderActiveNotes from '../renderFunctions/renderActiveNotes';
-import renderArchivedNotes from '../renderFunctions/renderArchivedNotes';
+import { renderNotes } from '../renderFunctions';
+import { getActiveNotes, getArchivedNotes } from '../utils';
 
 let showArchived = false;
 
@@ -14,10 +14,10 @@ const onShowArchivedBtn = () => {
   toggleShowArchived();
 
   if (showArchived) {
-    renderArchivedNotes();
+    renderNotes(getArchivedNotes());
     createNoteBtn.style = 'display: none';
   } else {
-    renderActiveNotes();
+    renderNotes(getActiveNotes());
     createNoteBtn.style = 'display: block';
   }
 };

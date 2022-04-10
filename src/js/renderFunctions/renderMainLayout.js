@@ -1,6 +1,5 @@
 import { refs } from '../utils';
-import onShowArchivedBtn from '../actions/onShowArchivedBtn.js';
-import onCreateBtn from '../actions/onCreateBtn';
+import { onCreateBtn, onShowArchivedBtn } from '../actions';
 import MainLayOut from '../components/MainLayout';
 
 const addEventListeners = () => {
