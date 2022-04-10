@@ -2,7 +2,7 @@ import getNotes from './getNotes';
 import saveNotes from './saveNotes';
 
 const addNote = note => {
-  let notes = getNotes();
+  const notes = getNotes();
   notes.push(note);
   saveNotes(notes);
 };

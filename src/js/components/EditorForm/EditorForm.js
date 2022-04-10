@@ -1,9 +1,9 @@
 import CategoriesOptions from '../CategoriesOptions';
 
 const EditorForm = ({ name = '', category = '', content = '' }) => {
-  return `<form id="form">
+  return `<form id="form" action=''>
             <label for="name">Note name</label>
-            <input id="name" name="name" type="text" value="${name}" />
+            <input id="name" name="name" type="text" value="${name}" required />
             <label for="category">Category</label>
             <select name="category" id="category">
               <option
@@ -18,12 +18,13 @@ const EditorForm = ({ name = '', category = '', content = '' }) => {
               name="content"
               id="content"
               cols="30"
-              rows="10"              
+              rows="10"
+              required
             >${content}</textarea>
             <div class="form__button__group">
               <button type="button" class='form__close__btn'>Close</button>
               <button type="submit">Save</button>
-            </div>
+            </div>            
           </form>`;
 };
 

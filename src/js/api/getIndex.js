@@ -1,7 +1,4 @@
-import getNotes from './getNotes.js';
-
-const getIndex = id => {
-  let notes = getNotes();
+const getIndex = (notes, id) => {
   return notes.findIndex(note => note.id === id);
 };
 
